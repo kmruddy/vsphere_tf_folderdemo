@@ -7,10 +7,6 @@ terraform {
   }
 }
 
-variable "folderstructure_parent_folder" {
-  default = "TampaVMUG"
-}
-
 provider "vsphere" {
   user                 = var.username
   password             = var.password
