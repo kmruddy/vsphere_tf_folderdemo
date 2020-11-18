@@ -9,3 +9,7 @@ variable "password" {
 variable "vcenter" {
   default = "probvcsa01.prob.local"
 }
+
+variable "folderstructure_parent_folder" {
+  default = "TampaVMUG"
+}
