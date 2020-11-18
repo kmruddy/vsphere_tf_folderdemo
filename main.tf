@@ -16,7 +16,7 @@ provider "vsphere" {
 
 module "folderstructure" {
   source  = "app.terraform.io/TPMM-Org/folderstructure/vsphere"
-  version = "0.0.2"
+  version = "0.0.1"
 
   parent_folder = var.folderstructure_parent_folder
 }
