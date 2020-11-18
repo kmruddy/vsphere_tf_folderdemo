@@ -29,3 +29,9 @@ resource "vsphere_folder" "parent" {
   type          = "vm"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
+
+resource "vsphere_folder" "web" {
+  path          = "${vsphere_folder.parent.path}/Web"
+  type          = "vm"
+  datacenter_id = data.vsphere_datacenter.dc.id
+}
