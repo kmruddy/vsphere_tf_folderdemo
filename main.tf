@@ -16,16 +16,18 @@ terraform {
 }
 
 provider "vsphere" {
-  user                 = "svc_tf@prob.local"
-  password             = "Terraform!23"
-  vsphere_server       = "probvcsa01.prob.local"
+  user                 = var.username
+  password             = var.password
+  vsphere_server       = var.vcenter
   allow_unverified_ssl = true
 }
 
-data "vsphere_datacenter" "dc" {}
+data "vsphere_datacenter" "dc" {
+  name = var.dc
+}
 
 resource "vsphere_folder" "parent" {
-  path          = "TampaVMUG"
+  path          = var.parent_folder
   type          = "vm"
   datacenter_id = data.vsphere_datacenter.dc.id
 }
