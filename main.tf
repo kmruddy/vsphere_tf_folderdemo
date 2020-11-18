@@ -7,6 +7,13 @@ terraform {
   }
 }
 
+provider "vsphere" {
+  user                 = var.username
+  password             = var.password
+  vsphere_server       = var.vcenter
+  allow_unverified_ssl = true
+}
+
 module "folderstructure" {
   source  = "app.terraform.io/TPMM-Org/folderstructure/vsphere"
   version = "0.0.1"
