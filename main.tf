@@ -5,6 +5,14 @@ terraform {
       version = "1.24.2"
     }
   }
+
+  backend "remote" {
+    organization = "TPMM-Org"
+
+    workspaces {
+      name = "vSphere-ParentFolder-TampaVMUG"
+    }
+  }
 }
 
 provider "vsphere" {
