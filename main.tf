@@ -5,6 +5,13 @@ terraform {
       version = "2.2.0"
     }
   }
+
+  cloud {
+    organization = "TPMM-Org"
+    workspaces {
+      tags = ["demo", "conference:Explore", "service:vsphere"]
+    }
+  }
 }
 
 provider "vsphere" {
