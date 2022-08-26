@@ -2,15 +2,7 @@ terraform {
   required_providers {
     vsphere = {
       source  = "hashicorp/vsphere"
-      version = "1.24.2"
-    }
-  }
-
-  backend "remote" {
-    organization = "TPMM-Org"
-
-    workspaces {
-      name = "vSphere-ParentFolder-TampaVMUG"
+      version = "2.2.0"
     }
   }
 }
