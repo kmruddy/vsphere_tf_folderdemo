@@ -2,9 +2,7 @@ variable "username" {
   default = "svc_tf@prob.local"
 }
 
-variable "password" {
-  default = "Terraform!23"
-}
+variable "password" {}
 
 variable "vcenter" {
   default = "probvcsa01.prob.local"
